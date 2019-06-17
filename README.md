@@ -4,19 +4,24 @@
 
 <h3>参数说明</h3>
 <h3>在需要存放下拉框的父级容器中调用该函数</h3>
-<h3>
- options: {
- 	arr：为数字名称,自定义
-	menu作为多级菜单的控制数组，需要多少级可自行调节
-	cName：下拉框的样式名，用于定位
-	linkId：作为下一级关联的标识
-	selectText：select下拉显示的内容
-	arrName：数组名字，该数组为下一级的数组名
- }
-</h3>
-
 
 ``` bash
+配置说明
+
+$('.xxx').SelectChange(数据, {
+  menu: [
+    {
+ 	  arr：为数字名称,自定义
+	  menu作为多级菜单的控制数组，需要多少级可自行调节
+	  cName：下拉框的样式名，用于定位
+	  linkId：作为下一级关联的标识
+	  selectText：select下拉显示的内容
+	  arrName：数组名字，该数组为下一级的数组名
+	}
+  ]
+});
+
+demo
 
 var arr = [
   {
