@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+	<title>json测试</title>
+	<script src="jquery-1.11.2.min.js" type="text/javascript"></script>
+	<script src="jquery.select.js" type="text/javascript"></script>
+	<script src="jquery.select2.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(function(){
+			var arr = [
+			    {
+			        "addTime": 1477652520000,
+			        "delState": "1",
+			        "editTime": 1477652978000,
+			        "editorId": 1,
+			        "editorName": "admin",
+			        "id": 3, //*
+			        "parentId": 0,//*
+			        "pdClassName": "广州新中国大厦服装城", //*
+			        "sortNum": 1,
+			        "subProductClassList": [
+			            {
+			                "addTime": 1477652520000,
+			                "delState": "1",
+			                "editTime": 1477652520000,
+			                "editorId": 1,
+			                "editorName": "admin",
+			                "id": 5,   //*
+			                "parentId": 3,
+			                "pdClassName": "男装", //*
+			                "sortNum": 1,
+			                "subProductClassList": [
+						            {
+						                "addTime": 1477652520000,
+						                "delState": "1",
+						                "editTime": 1477652520000,
+						                "editorId": 1,
+						                "editorName": "admin",
+						                "id": 6,   //*
+						                "parentId": 3,
+						                "pdClassName": "西装2", //*
+						                "sortNum": 2,
+						                "subProductClassList": [
+						                	{
+								                "addTime": 1477652520000,
+								                "delState": "1",
+								                "editTime": 1477652520000,
+								                "editorId": 1,
+								                "editorName": "admin",
+								                "id": 10,   //*
+								                "parentId": 3,
+								                "pdClassName": "西装3", //*
+								                "sortNum": 2,
+								                "subProductClassList": [],
+								                "viewState": "1"
+								            }
+						                ],
+						                "viewState": "1"
+						            },
+						            {
+						                "addTime": 1477652520000,
+						                "delState": "1",
+						                "editTime": 1477652520000,
+						                "editorId": 1,
+						                "editorName": "admin",
+						                "id": 10,   //*
+						                "parentId": 3,
+						                "pdClassName": "西装", //*
+						                "sortNum": 2,
+						                "subProductClassList": [],
+						                "viewState": "1"
+						            },
+						            {
+						                "addTime": 1477652520000,
+						                "delState": "1",
+						                "editTime": 1477652520000,
+						                "editorId": 1,
+						                "editorName": "admin",
+						                "id": 61,   //*
+						                "parentId": 3,
+						                "pdClassName": "西装", //*
+						                "sortNum": 2,
+						                "subProductClassList": [],
+						                "viewState": "1"
+						            }
+						            
+
+			                ],
+			                "viewState": "1"
+			            }
+			        ],
+			        "viewState": "1"
+			    },
+			    {
+			        "addTime": 1477652520000,
+			        "delState": "1",
+			        "editTime": 1477652520000,
+			        "editorId": 1,
+			        "editorName": "admin",
+			        "id": 4,
+			        "parentId": 0,
+			        "pdClassName": "广州白马服装城",
+			        "sortNum": 1,
+			        "subProductClassList": [
+			            {
+			                "addTime": 1477652520000,
+			                "delState": "1",
+			                "editTime": 1477652520000,
+			                "editorId": 1,
+			                "editorName": "admin",
+			                "id": 6,  //*  
+			                "parentId": 4,
+			                "pdClassName": "女装2",
+			                "sortNum": 1,
+			                "subProductClassList": [
+					            {
+					                "addTime": 1477652520000,
+					                "delState": "1",
+					                "editTime": 1477652520000,
+					                "editorId": 1,
+					                "editorName": "admin",
+					                "id": 9,  //*  
+					                "parentId": 4,
+					                "pdClassName": "衬衣",
+					                "sortNum": 1,
+					                "subProductClassList": [],
+					                "viewState": "1"
+					            },
+					            {
+					                "addTime": 1477652520000,
+					                "delState": "1",
+					                "editTime": 1477652520000,
+					                "editorId": 1,
+					                "editorName": "admin",
+					                "id": 9,  //*  
+					                "parentId": 4,
+					                "pdClassName": "裙子",
+					                "sortNum": 1,
+					                "subProductClassList": [],
+					                "viewState": "1"
+					            }
+			                ],
+			                "viewState": "1"
+			            }
+			        ],
+			        "viewState": "1"
+			    }
+			]
+			
+		  
+		   //使用说明
+		   /*
+		     在需要存放下拉框的父级别中调用该函数
+		     arr：为数字名称,自定义
+		     menu作为多级菜单的控制数组，需要多少级可自行调节
+		     cName：下拉框的样式名，用于定位
+		     linkId：作为下一级关联的标识
+		     selectText：select下拉显示的内容
+			 arrName：数组名字，该数组为下一级饿的数组名
+		    */
+		   $('.two .test').SelectChange(arr,{
+		   		menu:[
+		   		    {
+				   	  cName:'select1',
+				   	  linkId:'id',
+				   	  selectText:"pdClassName",
+				   	  arrName:'subProductClassListss'
+				   },
+				   {
+				   	  cName:'select2',
+				   	  linkId:'id',
+				   	  selectText:"pdClassName",
+				   	  arrName:'subProductClassList'
+				   }
+		   		]
+		   });
+		   $('.three .test').SelectChange(arr,{
+		   		menu:[
+		   		    {
+				   	  cName:'select1',
+				   	  linkId:'id',
+				   	  selectText:"pdClassName",
+				   	  arrName:'subProductClassList'
+				   },
+				   {
+				   	  cName:'select2',
+				   	  linkId:'id',
+				   	  selectText:"pdClassName",
+				   	  arrName:'subProductClassList'
+				   },
+				   {
+				   	  cName:'select3',
+				   	  linkId:'id',
+				   	  selectText:"pdClassName"
+				   }
+		   		]
+		   });
+
+		   $('.four .test').SelectChange(arr,{
+		   		menu:[
+		   		    {
+				   	  cName:'select1',
+				   	  linkId:'id',
+				   	  selectText:"pdClassName",
+				   	  arrName:'subProductClassList'
+				   },
+				   {
+				   	  cName:'select2',
+				   	  linkId:'id',
+				   	  selectText:"pdClassName",
+				   	  arrName:'subProductClassList'
+				   },
+				   {
+				   	  cName:'select3',
+				   	  linkId:'id',
+				   	  selectText:"pdClassName",
+				   	  arrName:'subProductClassList'
+				   },
+				   {
+				   	  cName:'select4',
+				   	  linkId:'id',
+				   	  selectText:"pdClassName"
+				   }
+		   		]
+		   });
+		});
+		
+	</script>
+</head>
+<body>
+  
+ <div class="two">
+ 	 <p class="test"></p>
+ </div>
+ <div class="three">
+ 	 <p class="test">
+ 	 	
+ 	 </p>
+ </div>
+ <div class="four">
+ 	 <p class="test"></p>
+ </div>
+</body>
+</html>
